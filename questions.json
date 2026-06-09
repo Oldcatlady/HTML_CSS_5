@@ -1,0 +1,314 @@
+[
+{
+"frage": "Welche Aufgabe hat flex-basis?",
+"antworten": [
+"Es definiert die Startgröße eines Flex-Items vor Verteilung von Platz",
+"Es bestimmt die Schriftgröße eines Elements",
+"Es legt die maximale Anzahl von Flex-Items fest",
+"Es ersetzt margin und padding vollständig",
+"Es deaktiviert Flexbox automatisch"
+],
+"korrekteAntwort": 0,
+"erklaerung": "Bevor Wachstum oder Schrumpfung berechnet wird, erhält jedes Flex-Item eine Ausgangsgröße. Diese bildet die Grundlage für alle weiteren Berechnungen."
+},
+{
+"frage": "In welcher Reihenfolge erfolgt die Berechnung im Flexbox-Modell?",
+"antworten": [
+"Zuerst grow, dann basis, dann shrink",
+"Zuerst shrink, dann grow, dann basis",
+"Zuerst Basisgröße, dann Grow bei Überfluss, dann Shrink bei Mangel",
+"Zuerst Positionierung, dann Farbe, dann Größe",
+"Zuerst Grid-Regeln, dann Flex-Regeln"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Die Berechnung beginnt immer mit einer festen Ausgangsgröße. Danach wird geprüft, ob zusätzlicher Platz verteilt oder Platzmangel ausgeglichen werden muss."
+},
+{
+"frage": "Was bedeutet flex: 1 1 200px?",
+"antworten": [
+"Das Element hat keine feste Größe und wird ignoriert",
+"Das Element ist absolut positioniert bei 200px",
+"Das Element hat 200px Höhe und keine Breitenregel",
+"Das Element ist komplett starr ohne Anpassung",
+"Das Element startet bei 200px und darf wachsen sowie schrumpfen"
+],
+"korrekteAntwort": 4,
+"erklaerung": "Die Kurzschreibweise kombiniert Basisgröße, Wachstum und Schrumpfen in einer einzigen Regel. Dadurch lässt sich das Verhalten eines Flex-Items kompakt definieren."
+},
+{
+"frage": "Was bedeutet flex: 1?",
+"antworten": [
+"flex: 0 0 auto",
+"flex: 1 1 0",
+"flex: 2 0 200px",
+"flex: none",
+"flex: 0 1 auto"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Die Kurzform setzt die Basisgröße auf 0 und erlaubt sowohl Wachstum als auch Schrumpfung. Dadurch teilen sich Elemente den verfügbaren Platz flexibel auf."
+},
+{
+"frage": "Was bedeutet flex: none?",
+"antworten": [
+"flex: 1 1 0",
+"flex: 0 1 0",
+"flex: 2 2 auto",
+"flex: 0 0 auto",
+"flex: 1 0 200px"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Ein Element mit dieser Einstellung bleibt in seiner ursprünglichen Größe stabil und reagiert weder auf zusätzlichen Platz noch auf Platzmangel."
+},
+{
+"frage": "Wie wird freier Platz bei flex-grow verteilt?",
+"antworten": [
+"Immer gleichmäßig ohne Bezug zu Werten",
+"Nach zufälliger Reihenfolge im DOM",
+"Nur an das erste Element",
+"Proportional entsprechend der grow-Werte der Elemente",
+"Nur an Elemente mit flex-shrink"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Der verfügbare Raum wird nicht gleich verteilt, sondern abhängig von den festgelegten Verhältniswerten der Flex-Items."
+},
+{
+"frage": "Was passiert bei Platzmangel mit flex-shrink?",
+"antworten": [
+"Alle Elemente bleiben gleich groß",
+"Nur das größte Element schrumpft",
+"Elemente werden proportional entsprechend ihrer shrink-Werte verkleinert",
+"Elemente verschwinden automatisch",
+"Flexbox deaktiviert sich selbst"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Wenn der Container nicht genug Platz bietet, werden alle Flex-Items verkleinert. Der Schrumpffaktor bestimmt, wie stark jedes Element betroffen ist."
+},
+{
+"frage": "Was bewirkt die CSS-Eigenschaft flex-direction: row in einem Flex-Container?",
+"antworten": [
+"Die Elemente werden vertikal von oben nach unten angeordnet",
+"Die Elemente werden unsichtbar gemacht",
+"Die Elemente werden absolut positioniert",
+"Die Elemente werden in einer Zeile horizontal nebeneinander angeordnet",
+"Die Elemente werden in ein Grid umgewandelt"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Die Flex-Richtung bestimmt die Hauptachse des Layouts. In der Standardrichtung row werden Elemente horizontal von links nach rechts angeordnet."
+},
+{
+"frage": "Was bewirkt flex-direction: column?",
+"antworten": [
+"Elemente werden nebeneinander in einer Reihe dargestellt",
+"Elemente werden zufällig angeordnet",
+"Elemente werden unsichtbar",
+"Elemente werden gestapelt und vertikal untereinander angeordnet",
+"Elemente werden in Tabellenform dargestellt"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Die Hauptachse wird bei column vertikal ausgerichtet, wodurch Flex-Items untereinander angeordnet werden."
+},
+{
+"frage": "Welche CSS-Eigenschaft steuert die horizontale Ausrichtung von Flex-Items in einem row-Layout?",
+"antworten": [
+"align-items",
+"justify-content",
+"flex-wrap",
+"flex-grow",
+"text-align"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Die Hauptachse in row ist horizontal. Die Verteilung entlang dieser Achse erfolgt über eine spezielle Ausrichtungs-Eigenschaft."
+},
+{
+"frage": "Welche CSS-Eigenschaft steuert die vertikale Ausrichtung von Flex-Items in einem row-Layout?",
+"antworten": [
+"justify-content",
+"align-items",
+"flex-direction",
+"flex-basis",
+"margin"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Die Querachse in einem row-Layout ist vertikal. Die Ausrichtung entlang dieser Achse wird über eine eigene Eigenschaft gesteuert."
+},
+{
+"frage": "Wie kann ein einzelnes Flex-Item horizontal und vertikal zentriert werden (bei row-Layout)?",
+"antworten": [
+"justify-content: flex-start und align-items: flex-start",
+"display: block und margin: 0",
+"position: absolute und top: 0",
+"flex-direction: column und width: 0",
+"justify-content: center und align-items: center"
+],
+"korrekteAntwort": 4,
+"erklaerung": "Zentrierung erfolgt über die Kombination beider Achsen. Dadurch wird das Element sowohl horizontal als auch vertikal im Container positioniert."
+},
+{
+"frage": "Was passiert, wenn flex-wrap: wrap gesetzt wird?",
+"antworten": [
+"Alle Elemente werden gelöscht",
+"Elemente werden in eine feste Größe gezwungen",
+"Flexbox wird deaktiviert",
+"Elemente werden immer in einer einzigen Zeile gehalten",
+"Elemente dürfen in mehrere Zeilen umbrechen"
+],
+"korrekteAntwort": 4,
+"erklaerung": "Ohne wrap bleiben Elemente in einer Zeile. Mit wrap können sie in neue Zeilen umfließen, wenn der Platz nicht ausreicht."
+},
+{
+"frage": "Warum wachsen Flex-Items manchmal nicht trotz gesetztem flex-grow?",
+"antworten": [
+"Weil flex-grow nur für Farben zuständig ist",
+"Weil der Container kein HTML-Element ist",
+"Weil display: flex fehlt oder der Container keinen freien Platz hat",
+"Weil CSS Flexbox nicht funktioniert",
+"Weil nur flex-shrink aktiviert ist"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Flex-grow wirkt nur, wenn ein Flex-Container existiert und zusätzlicher Platz im Container verfügbar ist."
+},
+{
+"frage": "Welche Aussage beschreibt die Hauptachse in Flexbox korrekt?",
+"antworten": [
+"Sie ist immer vertikal",
+"Sie ist immer horizontal",
+"Sie hängt von flex-direction ab",
+"Sie ist immer diagonal",
+"Sie ist identisch mit margin"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Die Hauptachse ist nicht fest, sondern wird durch die Richtung des Flex-Containers bestimmt."
+},
+{
+"frage": "Was ist der Unterschied zwischen justify-content und align-items?",
+"antworten": [
+"justify-content steuert Farben, align-items steuert Schrift",
+"justify-content ist nur für Grid, align-items nur für Flex",
+"justify-content steuert die Querachse, align-items die Hauptachse",
+"justify-content steuert die Hauptachse, align-items die Querachse",
+"Es gibt keinen Unterschied"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Die beiden Eigenschaften wirken auf unterschiedliche Achsen. Welche Achse horizontal oder vertikal ist, hängt von der Flex-Richtung ab."
+},
+{
+"frage": "Was passiert bei align-items: center in einem Flex-Container?",
+"antworten": [
+"Elemente werden links ausgerichtet",
+"Elemente werden oben ausgerichtet",
+"Elemente werden zufällig verteilt",
+"Elemente werden entlang der Querachse zentriert",
+"Elemente verschwinden"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Die Querachse wird unabhängig von der Hauptachse zentriert, wodurch eine vertikale oder horizontale Zentrierung entsteht."
+},
+{
+"frage": "Finde den Fehler im folgenden HTML-Code:\n<form>\n <label>Name</label>\n <input type=\"text\" name=\"name\">\n</form>",
+"antworten": [
+"Das form-Element fehlt das action-Attribut",
+"Das input-Element hat keinen Fehler",
+"Das label ist falsch verschachtelt und muss geschlossen werden",
+"Der name-Parameter ist unzulässig",
+"Das form-Element darf kein input enthalten"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Der gezeigte Code ist strukturell korrekt. Ein Formular darf Eingabefelder enthalten und benötigt nicht zwingend ein action-Attribut für die reine HTML-Struktur."
+},
+{
+"frage": "Finde den Fehler im folgenden HTML-Code:\n<form>\n <label for=\"name\">Name:</label>\n <input type=\"text\" id=\"username\">\n</form>",
+"antworten": [
+"Das label verweist auf ein falsches id-Attribut",
+"Das input-Element darf kein type-Attribut haben",
+"Das form-Element ist falsch geschlossen",
+"Es fehlt ein textarea-Element",
+"Der Code enthält keinen Fehler"
+],
+"korrekteAntwort": 0,
+"erklaerung": "Das Label ist mit for=\"name\" definiert, aber das Eingabefeld hat die id=\"username\". Beide müssen übereinstimmen, damit die Verbindung funktioniert."
+},
+{
+"frage": "Finde den Fehler im folgenden HTML-Code:\n<form>\n <input type=\"text\" name=\"name\">\n <label>Name:</label>\n</form>",
+"antworten": [
+"Das input-Element steht außerhalb des Formulars",
+"Das label ist nicht mit dem input verbunden",
+"Das form-Element ist überflüssig",
+"Das name-Attribut ist falsch geschrieben",
+"Der Code ist korrekt"
+],
+"korrekteAntwort": 1,
+"erklaerung": "Ein Label sollte mit einem Eingabefeld verbunden sein, um die Bedienbarkeit zu verbessern. Ohne Verbindung fehlt diese semantische Zuordnung."
+},
+{
+"frage": "Finde den Fehler im folgenden HTML-Code:\n<form>\n <input type=text name=\"email\">\n</form>",
+"antworten": [
+"Das form-Element ist falsch verwendet",
+"Das input-Element benötigt kein type-Attribut",
+"Der Wert von type ist nicht korrekt in Anführungszeichen gesetzt",
+"Das name-Attribut ist verboten",
+"Der Code enthält keine Fehler"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Attributwerte sollten in HTML grundsätzlich in Anführungszeichen stehen, um Syntaxprobleme und Parsing-Fehler zu vermeiden."
+},
+{
+"frage": "Finde den Fehler im folgenden HTML-Code:\n<form>\n <label for=\"email\">E-Mail:</label>\n <input type=\"email\" id=\"email\">\n</form>",
+"antworten": [
+"Das input-Element fehlt das name-Attribut",
+"Das label ist falsch geschrieben",
+"Das form-Element darf kein label enthalten",
+"Der type-Wert ist unzulässig",
+"Der Code ist vollständig korrekt"
+],
+"korrekteAntwort": 4,
+"erklaerung": "Die Struktur ist korrekt. Label und Input sind korrekt verbunden und der Typ 'email' ist ein gültiger Eingabetyp."
+},
+{
+"frage": "Finde den Fehler im folgenden HTML-Code:\n<form>\n <input type=\"text\">\n <input type=\"text\">\n</form>",
+"antworten": [
+"Es dürfen keine zwei input-Elemente im Formular sein",
+"Beide input-Elemente benötigen ein label",
+"Das form-Element ist falsch verschachtelt",
+"Der type-Wert text ist veraltet",
+"Der Code ist syntaktisch korrekt"
+],
+"korrekteAntwort": 4,
+"erklaerung": "Mehrere Eingabefelder innerhalb eines Formulars sind erlaubt und üblich. Labels sind sinnvoll, aber nicht zwingend erforderlich für die Funktion."
+},
+{
+"frage": "Finde den Fehler im folgenden HTML-Code:\n<form>\n <label for=\"name\">Name:</label>\n <input id=\"name\" type=\"text\">\n</form>",
+"antworten": [
+"Das form-Element benötigt ein method-Attribut",
+"Das input-Element muss außerhalb des form stehen",
+"Das label darf kein for-Attribut haben",
+"Der Code ist korrekt",
+"Das input-Element benötigt zwingend ein value-Attribut"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Label und Input sind korrekt verbunden über id und for. Alle verwendeten Attribute sind gültig und sinnvoll eingesetzt."
+},
+{
+"frage": "Finde den Fehler im folgenden HTML-Code:\n<form>\n <label>Name:</label>\n <input type=\"text\" name=\"name\">\n</form>",
+"antworten": [
+"Das form-Element fehlt ein schließendes Tag",
+"Das input-Element steht außerhalb des labels und ist dadurch ungültig",
+"Das label ist nicht mit dem input verbunden",
+"Der type-Wert ist falsch",
+"Der Code enthält keinen Fehler"
+],
+"korrekteAntwort": 2,
+"erklaerung": "Ohne for-Attribut und passende id besteht keine Verbindung zwischen Beschriftung und Eingabefeld, was die Benutzerfreundlichkeit reduziert."
+},
+{
+"frage": "Finde den Fehler im folgenden HTML-Code:\n<form>\n <input type=\"text\" name=\"name\">\n</form>",
+"antworten": [
+"Das input-Element muss ein label haben",
+"Das form-Element ist falsch verschachtelt",
+"Das type-Attribut fehlt",
+"Der Code ist korrekt",
+"Das name-Attribut ist ungültig"
+],
+"korrekteAntwort": 3,
+"erklaerung": "Ein einzelnes Eingabefeld innerhalb eines Formulars ist syntaktisch korrekt und kann ohne weitere Elemente funktionieren."
+}
+]
